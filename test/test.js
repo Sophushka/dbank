@@ -20,11 +20,11 @@ contract('dBank', ([deployer, user]) => {
   describe('testing token contract...', () => {
     describe('success', () => {
       it('checking token name', async () => {
-        expect(await token.name()).to.be.eq('Decentralized Bank Currency')
+        expect(await token.name()).to.be.eq('Decentralized Bank SDE Currency')
       })
 
       it('checking token symbol', async () => {
-        expect(await token.symbol()).to.be.eq('DBC')
+        expect(await token.symbol()).to.be.eq('DBSDEC')
       })
 
       it('checking token initial total supply', async () => {
@@ -75,7 +75,7 @@ contract('dBank', ([deployer, user]) => {
     })
   })
 
-  describe('testing withdraw...', () => {
+  /*describe('testing withdraw...', () => {
     let balance
 
     describe('success', () => {
@@ -120,5 +120,5 @@ contract('dBank', ([deployer, user]) => {
         await dbank.withdraw({from: deployer}).should.be.rejectedWith(EVM_REVERT) //wrong user
       })
     })
-  })
+  })*/
 })
